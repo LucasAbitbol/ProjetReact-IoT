@@ -1,15 +1,15 @@
-function InstantHearthrate() {
-  const bpm = Math.floor(Math.random() * 160) + 40;
+function InstantHearthrate(props) {
+    const { data } = props;
   let classBpm = 'bpmNormal';
 
-  if (bpm > 40 && bpm <= 70) {
+  if (data > 40 && data <= 70) {
     classBpm = 'bpmBas';
   }
-  if (bpm > 140 && bpm <= 200) {
+  if (data > 140 && data <= 200) {
     classBpm = 'bpmHaut';
   }
 
-  return <p class={classBpm}> Rythme cardiaque : {bpm}</p>;
+  return <p class={classBpm}> Rythme cardiaque : {data}</p>;
 }
 
 export default InstantHearthrate;
