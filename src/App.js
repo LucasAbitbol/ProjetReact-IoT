@@ -8,13 +8,19 @@ function randomBpm() {
 }
 
 function App() {
-  const [bpm, setBpm] = useState(0);
+  const [bpms, setBpms] = useState([50]);
 
   useEffect(() => {
     setInterval(() => {
-      setBpm(randomBpm);
-    }, 1000);
+      setBpms((prev) => {
+        return [...prev, randomBpm()]
+    });
+   }, 5000);
   }, []);
+
+  const bpm = bpms[bpms.length - 1 ];
+
+  console.log(bpms);
 
   return (
     <div className="App">
