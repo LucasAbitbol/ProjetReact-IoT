@@ -37,14 +37,10 @@
   }
 }
 
-.bpmBas {
-  color: yellow;
+.bpmPasNormal {
+  color: red;
 }
 
 .bpmNormal {
   color: green;
-}
-
-.bpmHaut {
-  color: red;
 }
