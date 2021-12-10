@@ -10,26 +10,26 @@ function randomBpm() {
 
 function App() {
   const [bpms, setBpms] = useState([50]);
-  
+
   const d = new Date();
-let h = d.getHours();
-let m = d.getMinutes();
-let s = d.getSeconds();
-let time = h + "h" + m + "m" + s + "s";
+  let h = d.getHours();
+  let m = d.getMinutes();
+  let s = d.getSeconds();
+  let time = h + 'h' + m + 'm' + s + 's';
 
   useEffect(() => {
     setInterval(() => {
-      setBpms((prev) => {      
+      setBpms((prev) => {
         const bpm = {
-        timestamp: time,
-        hearthrate: randomBpm(),
-      }
-      return [...prev, bpm]
+          timestamp: time,
+          hearthrate: randomBpm(),
+        };
+        return [...prev, bpm];
       });
-    }, 5000)
-}, [])
+    }, 5000);
+  }, []);
 
-  const bpm = bpms[bpms.length - 1 ];
+  const bpm = bpms[bpms.length - 1];
 
   console.log(bpms);
   console.log(bpm.timestamp);

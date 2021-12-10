@@ -2,7 +2,9 @@ function InstantHearthrate(props) {
   const { data } = props;
   let classBpm = 'bpmNormal';
 
-  if (!data) {return (<p>Pas de valeur</p>)}
+  if (!data) {
+    return <p>Pas de valeur</p>;
+  }
 
   if (data > 40 && data <= 70) {
     classBpm = 'bpmPasNormal';
