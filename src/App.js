@@ -6,9 +6,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <p>
-        Monitoring de rythme cardiaque 
-        </p>
+        <p>Monitoring de rythme cardiaque</p>
         <img src={logo} className="App-logo" alt="logo" />
         <InstantHearthrate />
       </header>

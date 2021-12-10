@@ -36,3 +36,15 @@
     transform: rotate(0deg);
   }
 }
+
+.bpmBas {
+  color: yellow;
+}
+
+.bpmNormal {
+  color: green;
+}
+
+.bpmHaut {
+  color: red;
+}
